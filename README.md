@@ -48,9 +48,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 # TODO :
 
-I want to perform some other little feature :
-
-  * set a license => Mozilla ?
   * Translations
   * Manage a popup to enter an email if the site is pwned
     * Retrieve all email in field into the page to prefield the popup ?
