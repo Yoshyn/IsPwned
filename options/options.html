@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>IsPwned ?</title>
+</head>
+
+<body>
+  <form>
+    <ul>
+      <li>
+        <label>
+          Update breaches :
+          <select id="updateFrequency" class="browser-style" name="updateFrequency">
+            <option value="1">per day</option>
+            <option value="7" selected>per week</option>
+            <option value="30">per month</option>
+          </select>
+        </label>
+      </li>
+      <li>
+        <label>
+          Display warning near the URL ?
+          <input type="checkbox" id="displayPageAction" name="displayPageAction">
+        </label>
+      </li>
+    </ul>
+    <hr />
+    <div>
+      <button type="submit" class="browser-style">Save settings</button>
+    </div>
+  </form>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+
+  "manifest_version": 2,
+  "name": "IsPwned",
+  "version": "0.1",
+
+  "description": "Display warning when a domain has been pwned !",
+
+  "icons": { "48": "icons/pwned-48.png" },
+
+  "permissions": [ "storage", "tabs", "https://haveibeenpwned.com/api/breaches", "notifications" ],
+
+  "browser_action": {
+    "default_icon": "icons/pwned-32.png",
+    "theme_icons": [{
+        "light": "icons/pwned-32-light.png",
+        "dark": "icons/pwned-32.png",
+        "size": 32
+    }],
+    "default_title": "isPwned ?"
+  },
+
+  "options_ui": {
+    "page": "options/options.html"
+  },
+
+  "page_action": {
+    "default_icon": "icons/pwned-32.png",
+    "default_title": "isPwned ?"
+  },
+
+  "background": {
+    "scripts": [
+      "background_scripts/pwned_domain.js",
+      "background_scripts/update_view.js",
+      "background_scripts/main.js"
+    ]
+  }
+}

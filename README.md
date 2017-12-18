@@ -1,2 +1,57 @@
-# IsPwned
-Web extension to know if a website has been pwned
+# isPwned ?
+
+The "isPwned" repository is a Firefox extension to display a warning when a website has know breaches.
+This is based on the data of [haveibeenpwned](https://haveibeenpwned.com).
+
+![Image of isPwned](https://github.com/Yoshyn/isPwned/docs/warning.png)
+
+There's 3 types of warnings :
+
+  * Success (green) : No breaches found. Maybe the website has not been pwned, maybe we don't know it yet...
+  * Warning (sort of yellow) : One of the top level domain of the current website has been pwned. If there's a number, it indicate the number of breaches found.
+  * Danger (sort of red) : Change your password ASAP for this domain.
+
+## Alternative :
+
+  * [BreachAlerts](https://github.com/nhnt11/BreachAlerts) : A Please support him, a such feature will be awesome directly into Firefox !
+
+## Settings
+
+Two simple settings for this extension :
+  * The frequency of breaches update from [haveibeenpwned](https://haveibeenpwned.com). (Breaches are store in local to avoid lot of API call)
+  * A boolean to know if the extension has to be display near the URL or not.
+
+![Image of isPwned](https://github.com/Yoshyn/isPwned/docs/settings.png)
+
+
+# Not working !
+
+To be honnest, I do my best but i'm clearly not a JS developer, so maybe this extension will not work due to dummy code.
+
+This has been tested with Firefox 57 and should work on newer versions.
+This should also be possible to make it work on Chrome without a lot of change.
+
+If you have issue(s), please leave a ticket or contribute !
+
+# Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Localy install this extension
+
+  Retrieve the project and follow https://developer.mozilla.org/uk/docs/Tools/about:debugging .
+
+# Thanks & Related
+
+  * https://github.com/gorhill/uBlock : I fully stole your code architecture. Your fault, your job is too great !
+  * https://github.com/nhnt11/BreachAlerts : I fully stole your idea but i clearly can't wait you finish your addon to forget this one !
+
+# TODO :
+
+I want to perform some other little feature :
+
+  * set a license => Mozilla ?
+  * Translations
+  * Manage a popup to enter an email if the site is pwned
+    * Retrieve all email in field into the page to prefield the popup ?
+  * Notification the first time we navigate on a pwned website ?
