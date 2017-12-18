@@ -3,7 +3,7 @@
 The "isPwned" repository is a Firefox extension to display a warning when a website has know breaches.
 This is based on the data of [haveibeenpwned](https://haveibeenpwned.com).
 
-![Image of isPwned](https://github.com/Yoshyn/isPwned/docs/warning.png)
+![Image of isPwned](https://raw.githubusercontent.com/Yoshyn/IsPwned/master/docs/warning.png)
 
 There's 3 types of warnings :
 
@@ -21,7 +21,7 @@ Two simple settings for this extension :
   * The frequency of breaches update from [haveibeenpwned](https://haveibeenpwned.com). (Breaches are store in local to avoid lot of API call)
   * A boolean to know if the extension has to be display near the URL or not.
 
-![Image of isPwned](https://github.com/Yoshyn/isPwned/docs/settings.png)
+![Image of isPwned](https://raw.githubusercontent.com/Yoshyn/IsPwned/master/docs/settings.png)
 
 
 # Not working !
