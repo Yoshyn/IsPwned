@@ -1,13 +1,15 @@
 {
-
   "manifest_version": 2,
-  "name": "IsPwned",
   "version": "0.1",
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
 
-  "description": "Display warning when a domain has been pwned !",
+  "developer": {
+    "name": "Yoshyn",
+    "url": "https://github.com/Yoshyn/IsPwned"
+  },
 
   "icons": { "48": "icons/pwned-48.png" },
-
   "permissions": [ "storage", "tabs", "https://haveibeenpwned.com/api/breaches", "notifications" ],
 
   "browser_action": {
@@ -35,5 +37,6 @@
       "background_scripts/update_view.js",
       "background_scripts/main.js"
     ]
-  }
+  },
+  "default_locale": "en"
 }

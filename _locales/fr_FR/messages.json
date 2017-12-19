@@ -1,0 +1,38 @@
+{
+  "extensionName": {
+    "message": "IsPwned ?"
+  },
+
+  "extensionDescription": {
+    "message": "Affiche une couleur rouge ou jaune sur l'icone de l'extension quand un site a déja été piraté par le passé."
+  },
+
+  "successTitle": {
+    "message": "Ce site ne semble pas encore avoir été hacké."
+  },
+  "warningTitle": {
+    "message": "Un domaine parent du site a été hacké !"
+  },
+  "dangerTitle": {
+    "message": "Ce site a été hacké !"
+  },
+
+  "update_breaches_frequency": {
+    "message": "Frequence des MAJ : "
+  },
+  "frequency_option_per_day": {
+    "message": "une fois par jour"
+  },
+  "frequency_option_per_week": {
+    "message": "une fois par semaine"
+  },
+  "frequency_option_per_month": {
+    "message": "une fois par mois"
+  },
+  "display_icon_in_url": {
+    "message": "Afficher une icone au niveau de l'URL ?"
+  },
+  "save_settings": {
+    "message": "Sauvegarder !"
+  }
+}

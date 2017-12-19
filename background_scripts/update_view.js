@@ -2,20 +2,20 @@
 
 const levelSettings =  {
   success: {
-    title: 'This website has not been pwned... yet. :D',
+    title: browser.i18n.getMessage("successTitle"),
     iconPath: { 32: 'icons/pwned-32-success.png' },
     badgeColor: '#a7eab7',
     badgeText: ''
   },
   warning: {
+    title: browser.i18n.getMessage("warningTitle"),
     badgeColor: '#e7d6a0',
-    title: 'One of the top domain of this website has been Pwned ! :\'x',
     iconPath: { 32: 'icons/pwned-32-warning.png' },
     badgeText: '!'
   },
   danger: {
+    title: browser.i18n.getMessage("dangerTitle"),
     badgeColor: '#ea5050',
-    title: 'This website has been Pwned ! :\'(',
     iconPath: { 32: 'icons/pwned-32-danger.png' },
     badgeText: '!'
   }

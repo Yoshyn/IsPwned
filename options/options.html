@@ -11,26 +11,27 @@
     <ul>
       <li>
         <label>
-          Update breaches :
+          <span data-i18n="update_breaches_frequency"></span>
           <select id="updateFrequency" class="browser-style" name="updateFrequency">
-            <option value="1">per day</option>
-            <option value="7" selected>per week</option>
-            <option value="30">per month</option>
+            <option value="1" data-i18n="frequency_option_per_day"></option>
+            <option value="7" data-i18n="frequency_option_per_week"></option>
+            <option value="30" data-i18n="frequency_option_per_month"></option>
           </select>
         </label>
       </li>
       <li>
         <label>
-          Display warning near the URL ?
+          <span data-i18n="display_icon_in_url"></span>
           <input type="checkbox" id="displayPageAction" name="displayPageAction">
         </label>
       </li>
     </ul>
     <hr />
     <div>
-      <button type="submit" class="browser-style">Save settings</button>
+      <button type="submit" class="browser-style" data-i18n="save_settings"></button>
     </div>
   </form>
+  <script src="data-i18n.js"></script>
   <script src="options.js"></script>
 </body>
 </html>

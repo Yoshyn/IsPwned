@@ -49,13 +49,13 @@ let isPwned = {
       return;
     }
 
-    pwnedClient.fetchBreaches().then(function(results) {
+    fetchRemoteBreaches().then(results => {
       let domains = {}
-      results.forEach(function(item){
+      results.forEach(item => {
         if (item["Domain"] && item["Domain"] != "") { domains[item["Domain"]] = item; }
       });
       isPwned.updateDomains(domains)
-      console.isPwnedModule("IsPwned : fetchBreaches from haveibeenpwned.com finish successfully !")
+      console.debug("isPwnedModule : fetchBreaches from haveibeenpwned.com finish successfully !")
     })
   },
 
@@ -86,12 +86,13 @@ let isPwned = {
       response = isPwned.settings.displayPageAction;
       break;
     case 'setUpdateFrequency':
-      let parsedValue = parseInt(details.value);
-      if ( parsedValue != NaN )
+      var parsedValue = parseInt(details.value);
+      if (!Number.isNaN(parsedValue))
         isPwned.updateSetting("updateFrequency", parsedValue)
+      break;
     case 'setDisplayPageAction':
       isPwned.updateSetting("displayPageAction", details.value)
-      browser.tabs.query({}).then( tabs =>
+      browser.tabs.query({}).then(tabs =>
         {
           for (let tab of tabs)
             browser.pageAction.hide(tab.id);

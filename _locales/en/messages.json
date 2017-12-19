@@ -1,0 +1,38 @@
+{
+  "extensionName": {
+    "message": "IsPwned ?"
+  },
+
+  "extensionDescription": {
+    "message": "Display a warning color on the extension icon when a website has know breaches."
+  },
+
+  "successTitle": {
+    "message": "This site seem to be safe."
+  },
+  "warningTitle": {
+    "message": "One parent domain of the current website has been pwned !"
+  },
+  "dangerTitle": {
+    "message": "This website has been pwned !"
+  },
+
+  "update_breaches_frequency": {
+    "message": "Update breaches frequency : "
+  },
+  "frequency_option_per_day": {
+    "message": "per day"
+  },
+  "frequency_option_per_week": {
+    "message": "per week"
+  },
+  "frequency_option_per_month": {
+    "message": "per month"
+  },
+  "display_icon_in_url": {
+    "message": "Display warning in url ?"
+  },
+  "save_settings": {
+    "message": "Save settings !"
+  }
+}

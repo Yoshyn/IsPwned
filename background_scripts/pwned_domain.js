@@ -1,24 +1,22 @@
 "use strict";
 
-const pwnedClient = {
-  fetchBreaches: function () {
-    const requestURL = "https://haveibeenpwned.com/api/breaches"
-    const requestHeaders = new Headers();
-    requestHeaders.append('accept', "application/vnd.haveibeenpwned.v2+json");
-    requestHeaders.append('Access-Control-Allow-Origin', '*');
-    const driveRequest = new Request(requestURL, {
-      method: "GET",
-      headers: requestHeaders
-    });
+function fetchRemoteBreaches() {
+  const requestURL = "https://haveibeenpwned.com/api/breaches"
+  const requestHeaders = new Headers();
+  requestHeaders.append('accept', "application/vnd.haveibeenpwned.v2+json");
+  requestHeaders.append('Access-Control-Allow-Origin', '*');
+  const driveRequest = new Request(requestURL, {
+    method: "GET",
+    headers: requestHeaders
+  });
 
-    return fetch(driveRequest).then((response) => {
-      if (response.status === 200) {
-        return response.json();
-      } else {
-        throw response.status;
-      }
-    });
-  }
+  return fetch(driveRequest).then((response) => {
+    if (response.status === 200) {
+      return response.json();
+    } else {
+      throw response.status;
+    }
+  });
 }
 
 function pwnedDomainPerform(tab) {
