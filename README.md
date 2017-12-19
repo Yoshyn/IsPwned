@@ -26,12 +26,12 @@ Two simple settings for this extension :
 
 # Not working !
 
-To be honnest, I do my best but i'm clearly not a JS developer, so maybe this extension will not work due to dummy code.
+I do my best a JS developer, so maybe this extension will not work for you. In this case please, drop me an issue !
 
 This has been tested with Firefox 57 and should work on newer versions.
 This should also be possible to make it work on Chrome without a lot of change.
 
-If you have issue(s), please leave a ticket or contribute !
+If you have any issue(s), please leave a ticket or contribute !
 
 # Contributing
 
@@ -48,7 +48,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 # TODO :
 
-  * Translations
+  * Manage a popup with a link to ihavebeenpwned.com & some explications
   * Manage a popup to enter an email if the site is pwned
     * Retrieve all email in field into the page to prefield the popup ?
-  * Notification the first time we navigate on a pwned website ?
