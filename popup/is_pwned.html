@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="is_pwned.css"/>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row logoPanel">
+      <div class="body-logo">
+        <span class="logo"><a href="https://haveibeenpwned.com/" id="logoLink">';--have i been pwned?</a></span>
+      </div>
+      <p>Check if you have an account that has been compromised in a data breach</p>
+    </div>
+  </div>
+  <div class="container">
+    <form action="/" method="post" novalidate="novalidate">
+      <div class="input-group">
+        <input autocapitalize="off" autocorrect="off" class="form-control" data-val="true" data-val-maxlength="The field Account must be a string or array type with a maximum length of '255'." data-val-maxlength-max="255" data-val-minlength="The field Account must be a string or array type with a minimum length of '3'." data-val-minlength-min="3" id="Account" maxlength="255" name="Account" placeholder="email address or username" spellcheck="false" value="" type="email">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="submit" id="searchPwnage">pwned?</button>
+        </span>
+      </div>
+    </form>
+  </div>
+  <div id="breachesResults"></div>
+  <script src="is_pwned.js"></script>
+</body>
+</html>

@@ -19,7 +19,8 @@
         "dark": "icons/pwned-32.png",
         "size": 32
     }],
-    "default_title": "isPwned ?"
+    "default_title": "isPwned ?",
+    "default_popup": "popup/is_pwned.html"
   },
 
   "options_ui": {

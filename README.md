@@ -3,6 +3,8 @@
 The "isPwned" repository is a Firefox extension to display a warning when a website has know breaches.
 This is based on the data of [haveibeenpwned](https://haveibeenpwned.com).
 
+/!\ Just in case if it's not clear : I'm not the man behind `haveibeenpwned.com`.
+
 ![Image of isPwned](https://raw.githubusercontent.com/Yoshyn/IsPwned/master/docs/warning.png)
 
 There's 3 types of warnings :
@@ -48,6 +50,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 # TODO :
 
-  * Manage a popup with a link to ihavebeenpwned.com & some explications
-  * Manage a popup to enter an email if the site is pwned
-    * Retrieve all email in field into the page to prefield the popup ?
+  * Translation for popup
+  * Avoid several call to haveibeenpwned.com for a uniq acount
+  * Retrieve all email into current the page and use it to prefield the popup ?
