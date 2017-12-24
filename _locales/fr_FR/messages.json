@@ -34,5 +34,8 @@
   },
   "save_settings": {
     "message": "Sauvegarder !"
+  },
+  "popup_explanation": {
+    "message": "Vérifier si un de vos compte a été compromis par une fuite de données"
   }
 }

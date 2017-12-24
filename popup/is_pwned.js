@@ -21,26 +21,37 @@ document.getElementById("logoLink").addEventListener("click", (event) => {
   window.close();
 });
 
-document.getElementById("searchPwnage").addEventListener("click", (event) => {
+
+var searchPwnage = document.getElementById("searchPwnage");
+
+searchPwnage.addEventListener("click", (event) => {
   event.preventDefault();
   var account = document.getElementById("Account").value;
+
+  searchPwnage.disabled = true;
+  setTimeout(function(){ searchPwnage.disabled = false; }, 2000);
+
   if (account) {
     fetchBreacheAccount(account).then(results => {
-      var innerHTML="<table class=\"table table-bordered table-hover\"><thead><tr class=\"danger\"><th>Domain</th><th>BreachDate</th><th>Description</th><th>DataClasses</th></tr></thead><tbody>"
+      var innerHTML="<table class=\"table table-responsive table-bordered table-hover\"><thead><tr class=\"danger\"><th>Domain</th><th>BreachDate</th><th>Description</th><th>DataClasses</th></tr></thead><tbody>"
       results.forEach(item => {
         innerHTML+="<tr class=\"warning\">"
         innerHTML+=`<th>${item.Domain}</th>`
         innerHTML+=`<th>${item.BreachDate}</th>`
         innerHTML+=`<th>${item.Description}</th>`
-        innerHTML+=`<th>${item.DataClasses}</th>`
+        innerHTML+=`<th class="dataClasses"><ul><li>${item.DataClasses.join('</li><li>')}</li></ul></th>`
         innerHTML+="</tr>"
       })
       innerHTML+="</tbody></table>"
-      document.getElementById("breachesResults").innerHTML = innerHTML
+      document.getElementById("breachesResults").innerHTML = innerHTML;
     },
     function(error) {
-      var innerHTML = "<div class=\"alert alert-success\">No Breaches found for this account !</div>"
-      document.getElementById("breachesResults").innerHTML = innerHTML
+      var innerHTML = ""
+      if (error == 404)
+        innerHTML = "<div class=\"alert alert-success\">No Breaches found for this account !</div>"
+      else
+        innerHTML = `<div class=\"alert alert-danger\">${error} : An error occur...</div>`
+      document.getElementById("breachesResults").innerHTML = innerHTML;
     })
   }
 });
